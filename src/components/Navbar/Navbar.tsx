@@ -1,24 +1,24 @@
-import AnimatedBackground from "../AnimatedBackground";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <header className="w-full fixed top-0 left-0 text-white shadow-lg backdrop-blur-sm z-50 overflow-hidden">
-      {/* Fundo animado */}
-      <AnimatedBackground />
+    <div className="w-full flex justify-center bg-indigo-900 py-4 text-white">
+      <div className="container flex justify-between items-center mx-8">
 
-      {/* Conteúdo da Navbar */}
-      <div className="container relative z-10 mx-auto flex justify-between items-center h-16 px-8">
-        <h1 className="text-2xl font-semibold tracking-wide">Blog Pessoal</h1>
+        {/* Título */}
+        <Link to="/home" className="text-2xl font-bold">Blog Pessoal</Link>
 
-        <nav className="flex gap-6 text-lg">
-          <a href="#" className="hover:text-indigo-300 transition-colors">Postagens</a>
-          <a href="#" className="hover:text-indigo-300 transition-colors">Temas</a>
-          <a href="#" className="hover:text-indigo-300 transition-colors">Cadastrar Tema</a>
-          <a href="#" className="hover:text-indigo-300 transition-colors">Perfil</a>
-          <a href="#" className="hover:text-indigo-300 transition-colors">Sair</a>
-        </nav>
+        {/* Menu */}
+        <div className="flex gap-4 text-lg">
+          <Link to="/postagens">Postagens</Link>
+          <Link to="/temas">Temas</Link>
+          <Link to="/cadastro">Cadastrar Tema</Link>
+          <Link to="/perfil">Perfil</Link>
+          <Link to="/login">Sair</Link>
+        </div>
+
       </div>
-    </header>
+    </div>
   );
 }
 
