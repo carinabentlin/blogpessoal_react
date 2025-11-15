@@ -1,8 +1,7 @@
-function Home() {
+export default function Home() {
   return (
     <div 
-      className="bg-[#0f0e17] flex items-center justify-center px-6"
-      style={{ height: "calc(100vh - 144px)" }}
+      className="bg-[#0f0e17] min-h-[calc(100vh-150px)] flex items-center justify-center px-6 pt-16"
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 text-white">
 
@@ -38,5 +37,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
