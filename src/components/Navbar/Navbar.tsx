@@ -26,7 +26,7 @@ function Navbar() {
         {/* Menu */}
         <div className="flex gap-4 text-lg">
           <Link to="/postagens">Postagens</Link>
-          <Link to="/temas">Temas</Link>
+          <Link to='/temas' className='hover:underline'>Temas</Link>
           <Link to="/cadastro">Cadastrar Tema</Link>
           <Link to="/perfil">Perfil</Link>
           <Link to='' onClick={logout} className="hover:underline">Sair</Link>

@@ -5,7 +5,7 @@ import { createContext, useState, type ReactNode } from "react";
 import type UsuarioLogin from "../models/UsuarioLogin";
 
 // Importando a função que chama a API de login no backend
-import { login } from "../services/Service";
+import * as Service from "../services/Service";
 
 
 //------------------------------------------------------------
@@ -73,7 +73,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         try {
             // Faz a requisição para o backend, enviando usuário e senha
             // O backend devolve os dados completos + token
-            await login(`/usuarios/logar`, usuarioLogin, setUsuario);
+            await (Service as any).login(`/usuarios/logar`, usuarioLogin, setUsuario);
 
             alert('Usuário autenticado com sucesso!');
         } catch (error) {

@@ -36,7 +36,7 @@ function Cadastro() {
     if (usuario.id !== 0) {
       retornar();   // navega para home
     }
-  }, [usuario]);
+  }, [usuario.id]);
 
   // Função para retornar ao início
   function retornar() {
