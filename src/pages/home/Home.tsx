@@ -1,39 +1,39 @@
-export default function Home() {
-  return (
-    <div 
-      className="bg-[#0f0e17] min-h-[calc(100vh-150px)] flex items-center justify-center px-6 pt-16"
-    >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 text-white">
+import ListaPostagens from "../../components/postagem/listapostagens/ListaPostagens"
+import ModalPostagem from "../../components/postagem/modalpostagem/ModalPostagem"
 
-        {/* Coluna Esquerda */}
-        <div className="flex flex-col gap-6 animate-fade-slide">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-xl text-center md:text-left">
-            Seja bem vinde!
-          </h2>
+function Home() {
+    return (
+        <>
+            <div className="bg-indigo-900 flex justify-center">
+                <div className='container grid grid-cols-2 text-white'>
+                    <div className="flex flex-col gap-4 items-center justify-center py-4">
+                        <h2 className='text-5xl font-bold'>
+                            Seja Bem Vinde!
+                        </h2>
+                        <p className='text-xl'>
+                            Expresse aqui seus pensamentos e opiniões
+                        </p>
 
-          <p className="text-lg md:text-xl opacity-90 text-center md:text-left">
-            Expresse aqui os seus pensamentos!
-          </p>
+                        <div className="flex justify-around gap-4">
+                            
+                            <ModalPostagem />
 
-          <div className="flex justify-center md:justify-start">
-            <button
-              className="border-2 border-white px-6 py-2 rounded-lg text-lg font-medium text-white hover:bg-white hover:text-[#4c1d95] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
-            >
-              Nova Postagem
-            </button>
-          </div>
-        </div>
+                        </div>
+                    </div>
 
-        {/* Coluna Direita */}
-        <div className="flex justify-center">
-          <img
-            src="https://i.imgur.com/fyfri1v.png"
-            alt="Imagem da página home"
-            className="w-56 md:w-72 lg:w-80 object-contain animate-float"
-          />
-        </div>
-
-      </div>
-    </div>
-  );
+                    <div className="flex justify-center ">
+                        <img
+                            src="https://ik.imagekit.io/sv3txjrcv/blogpessoal_react/imagem_post.png"
+                            alt="Imagem Página Home"
+                            className='w-2/3'
+                        />
+                    </div>
+                </div>
+            </div>
+            
+            <ListaPostagens />
+        </>
+    )
 }
+
+export default Home

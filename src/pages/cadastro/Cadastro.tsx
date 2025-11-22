@@ -176,7 +176,7 @@ function Cadastro() {
                 placeholder="Confirmar Senha"
                 className="border-2 border-slate-700 rounded p-2"
                 value={confirmarSenha}
-                onChange={handleConfirmarSenha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
               />
             </div>
 
