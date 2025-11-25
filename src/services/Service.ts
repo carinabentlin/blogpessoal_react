@@ -5,11 +5,15 @@ const api = axios.create({
 });
 
 // ------------------------
-// 🔵 LOGIN (sem setDado)
+// 🔵 LOGIN (3 parâmetros)
 // ------------------------
-export async function login(url: string, dados: any) {
+export async function login(
+  url: string,
+  dados: any,
+  setDado: Function
+) {
   const resposta = await api.post(url, dados);
-  return resposta.data; // já retorna o objeto final
+  setDado(resposta.data);
 }
 
 // ------------------------

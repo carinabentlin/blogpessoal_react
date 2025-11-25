@@ -23,7 +23,7 @@ function Login() {
         if (usuario.token !== "") {
             navigate('/home')
         }
-    }, [usuario])
+    }, [usuario.token])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuarioLogin({
